@@ -1,0 +1,2 @@
+# RateOrFeedback
+Android Rating Library.
