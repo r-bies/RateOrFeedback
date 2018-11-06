@@ -1,0 +1,12 @@
+<resources>
+    <string name="RateOrFeedback_AskLikeAppMessage">Enjoying the app?</string>
+    <string name="RateOrFeedback_AskLikeAppPositive">Yes!</string>
+    <string name="RateOrFeedback_AskLikeAppNegative">Not really</string>
+    <string name="RateOrFeedback_RequestReviewMessage">Awesome! We\'d love a Play Store review...</string>
+    <string name="RateOrFeedback_RequestReviewPositive">Sure thing!</string>
+    <string name="RateOrFeedback_RequestReviewNegative">Not right now</string>
+    <string name="RateOrFeedback_RequestFeedbackMessage">Would you like to send feedback?</string>
+    <string name="RateOrFeedback_RequestFeedbackPositive">Yes please!</string>
+    <string name="RateOrFeedback_RequestFeedbackNegative">Not right now</string>
+    <string name="RateOrFeedback_FeedbackEmailTitle">Feedback</string>
+</resources>

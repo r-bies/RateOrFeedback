@@ -1,0 +1,12 @@
+<resources>
+    <string name="RateOrFeedback_AskLikeAppMessage">このアプリを楽しんで頂けていますでしょうか？</string>
+    <string name="RateOrFeedback_AskLikeAppPositive">楽しい！</string>
+    <string name="RateOrFeedback_AskLikeAppNegative">そうでもない</string>
+    <string name="RateOrFeedback_RequestReviewMessage">ありがとうございます！開発の励みにもなりますのでPlay ストアで評価して頂けないでしょうか！？</string>
+    <string name="RateOrFeedback_RequestReviewPositive">評価する！</string>
+    <string name="RateOrFeedback_RequestReviewNegative">今はしない</string>
+    <string name="RateOrFeedback_RequestFeedbackMessage">改善点や要望を送信しますか？</string>
+    <string name="RateOrFeedback_RequestFeedbackPositive">送信する！</string>
+    <string name="RateOrFeedback_RequestFeedbackNegative">今はしない</string>
+    <string name="RateOrFeedback_FeedbackEmailTitle">改善点/要望</string>
+</resources>
