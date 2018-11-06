@@ -8,12 +8,21 @@
 
 
     <Button
-        android:id="@+id/buttonRateOrFeedback"
+        android:id="@+id/buttonShowAlways"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_title"
+        android:text="@string/button_show_always"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonShowIfNeeds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_show_if_needs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonShowAlways" />
 </android.support.constraint.ConstraintLayout>

@@ -44,12 +44,10 @@ class RateOrFeedback(activity: AppCompatActivity?, fragment: Fragment?) {
         onPositive = {
             val requestReviewDialog = RequestReviewDialogFragment.newInstance(requestReviewDialogOption)
             showDialogFragment(requestReviewDialog)
-//            requestReviewDialog.show(fragment.childFragmentManager, RequestReviewDialogFragment.javaClass.simpleName)
         }
         onNegative = {
             val requestFeedbackDialog = RequestFeedbackDialogFragment.newInstance(requestFeedbackDialogOption)
             showDialogFragment(requestFeedbackDialog)
-//            requestFeedbackDialog.show(fragment.childFragmentManager, RequestReviewDialogFragment.javaClass.simpleName)
         }
         onPositiveWrapper = {
             onPositive?.invoke()

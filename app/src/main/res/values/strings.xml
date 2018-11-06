@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Example</string>
-    <string name="button_title">RateOrFeedback</string>
+    <string name="button_show_always">Show Always</string>
+    <string name="button_show_if_needs">Show If Needs</string>
 </resources>
