@@ -1,6 +1,8 @@
 # About RateOrFeedback
 This is a android library that help developers add rating/feedback screen.
 
+![screenshot](doc/screenshot.png?raw=true "screenshot")
+
 # How to use
 Add this to your project build.gradle if it needs.
 ```
