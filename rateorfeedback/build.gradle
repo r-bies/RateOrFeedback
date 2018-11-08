@@ -46,7 +46,7 @@ def versionMajor = 0
 def versionMinor = 0
 def versionPatch = 1
 
-group 'r-bies'
+group 'jp.co.runners'
 archivesBaseName = 'rateorfeedback'
 version "${versionMajor}.${versionMinor}.${versionPatch}"
 
