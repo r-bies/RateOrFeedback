@@ -1,12 +1,9 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.github.dcendents.android-maven'
+apply from: 'bintray-publish.gradle'
 
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 21
@@ -42,115 +39,4 @@ repositories {
 }
 
 
-def versionMajor = 0
-def versionMinor = 0
-def versionPatch = 2
 
-group 'jp.co.runners'
-archivesBaseName = 'rateorfeedback'
-version "${versionMajor}.${versionMinor}.${versionPatch}"
-
-def libraryId = 'rateorfeedback'
-def siteUrl = 'https://github.com/r-bies/RateOrFeedback'
-def githubUrl = 'https://github.com/r-bies/RateOrFeedback'
-
-// 修正の参考
-// https://stackoverflow.com/questions/39919320/jar-file-contains-no-class-files-after-bintrayupload
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            name libraryId
-            url siteUrl
-
-            packaging 'aar'
-            groupId project.group
-            artifactId libraryId
-            version project.version
-
-            licenses {
-                license {
-                    name 'Apache License 2.0'
-                    url 'https://opensource.org/licenses/apache2.0'
-                    distribution 'repo'
-                }
-            }
-            scm {
-                connection githubUrl + '.git'
-                url githubUrl
-            }
-        }
-    }
-}
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-//    archives javadocJar
-    archives sourcesJar
-}
-
-bintray {
-    user = "$System.env.bintray_user"
-    key = "$System.env.bintray_key"
-    configurations = ['archives']
-
-    pkg {
-        repo = 'maven'
-        name = project.group + '.' + libraryId
-//        name = libraryId
-        licenses = ['Apache-2.0']
-        websiteUrl = siteUrl
-        vcsUrl = githubUrl + '.git'
-        issueTrackerUrl = githubUrl + '/issues'
-        publish = true
-        publicDownloadNumbers = true
-        version {
-            name = project.version
-        }
-    }
-}
-
-//publishing {
-//    publications {
-//        MyPublication(MavenPublication) {
-//            from components.java
-//            artifact sourcesJar
-//            artifact javadocJar
-//            groupId 'org.jfrog.gradle.sample'
-//            artifactId 'gradle-project'
-//            version '1.1'
-//            pom.withXml {
-//                def root = asNode()
-//                root.appendNode('description', 'Your description of the lib')
-//                root.appendNode('name', 'Your name of the lib')
-//                root.appendNode('url', 'https://site_for_lib.tld')
-//                root.children().last() + pomConfig
-//            }
-//        }
-//    }
-//}
-
-
-//
-//task javadocJar(type: Jar, dependsOn: javadoc) {
-//    classifier = 'javadoc'
-//    from javadoc.destinationDir
-//}
-//
-//// add javadoc/source jar tasks as artifacts
-//artifacts {
-//    archives sourcesJar, javadocJar
-//}
