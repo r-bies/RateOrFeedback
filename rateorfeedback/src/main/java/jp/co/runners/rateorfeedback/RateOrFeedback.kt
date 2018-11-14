@@ -100,12 +100,12 @@ class RateOrFeedback(activity: AppCompatActivity?, fragment: Fragment?) {
             onNegative?.invoke()
         }
     }
-    var playStoreUrl: String? = null
-    var feedbackEmail: String? = null
-    var reviewRequestId = 0
-    var intervalFromPreviousShowing = 60 * 60 * 24 * 7L
-    var notShowTermSecondsFromInstall = 60 * 60 * 24 * 7L
-    var isDebug = false
+    private var playStoreUrl: String? = null
+    private var feedbackEmail: String? = null
+    private var reviewRequestId = 0
+    private var intervalFromPreviousShowing = 60 * 60 * 24 * 7L
+    private var notShowTermSecondsFromInstall = 60 * 60 * 24 * 7L
+    private var isDebug = false
 
     fun setAskLikeAppDialogMessage(value: String): RateOrFeedback {
         askLikeAppDialogOption.message = value
