@@ -14,7 +14,7 @@ repositories {
 Add this to your app build.gradle.
 ```
 dependencies {
-    implementation 'jp.co.runners:rateorfeedback:0.0.2'
+    implementation 'jp.co.runners:rateorfeedback:0.1.0'
 }
 ```
 
