@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.support.annotation.StringRes
 import android.support.v4.app.DialogFragment
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
@@ -112,15 +113,24 @@ class RateOrFeedback(activity: AppCompatActivity?, fragment: Fragment?) {
         return this
     }
 
+    fun setAskLikeAppDialogMessage(@StringRes resId: Int) =
+            setAskLikeAppDialogMessage(context.getString(resId))
+
     fun setAskLikeAppDialogPositiveTitle(value: String): RateOrFeedback {
         askLikeAppDialogOption.positiveButtonTitle = value
         return this
     }
 
+    fun setAskLikeAppDialogPositiveTitle(@StringRes resId: Int) =
+            setAskLikeAppDialogPositiveTitle(context.getString(resId))
+
     fun setAskLikeAppDialogNegativeTitle(value: String): RateOrFeedback {
         askLikeAppDialogOption.negativeButtonTitle = value
         return this
     }
+
+    fun setAskLikeAppDialogNegativeTitle(@StringRes resId: Int) =
+            setAskLikeAppDialogNegativeTitle(context.getString(resId))
 
     fun setAskLikeAppDialogOnPositive(value: () -> Unit): RateOrFeedback {
         askLikeAppDialogOption.onPositive = value
@@ -137,15 +147,24 @@ class RateOrFeedback(activity: AppCompatActivity?, fragment: Fragment?) {
         return this
     }
 
+    fun setRequestReviewDialogMessage(@StringRes resId: Int) =
+            setRequestReviewDialogMessage(context.getString(resId))
+
     fun setRequestReviewDialogPositiveTitle(value: String): RateOrFeedback {
         requestReviewDialogOption.positiveButtonTitle = value
         return this
     }
 
+    fun setRequestReviewDialogPositiveTitle(@StringRes resId: Int) =
+            setRequestReviewDialogPositiveTitle(context.getString(resId))
+
     fun setRequestReviewDialogNegativeTitle(value: String): RateOrFeedback {
         requestReviewDialogOption.negativeButtonTitle = value
         return this
     }
+
+    fun setRequestReviewDialogNegativeTitle(@StringRes resId: Int) =
+            setRequestReviewDialogNegativeTitle(context.getString(resId))
 
     fun setRequestReviewDialogOnPositive(value: () -> Unit): RateOrFeedback {
         requestReviewDialogOption.onPositive = value
@@ -162,15 +181,24 @@ class RateOrFeedback(activity: AppCompatActivity?, fragment: Fragment?) {
         return this
     }
 
+    fun setRequestFeedbackDialogMessage(@StringRes resId: Int) =
+            setRequestFeedbackDialogMessage(context.getString(resId))
+
     fun setRequestFeedbackDialogPositiveTitle(value: String): RateOrFeedback {
         requestFeedbackDialogOption.positiveButtonTitle = value
         return this
     }
 
+    fun setRequestFeedbackDialogPositiveTitle(@StringRes resId: Int) =
+            setRequestFeedbackDialogPositiveTitle(context.getString(resId))
+
     fun setRequestFeedbackDialogNegativeTitle(value: String): RateOrFeedback {
         requestFeedbackDialogOption.negativeButtonTitle = value
         return this
     }
+
+    fun setRequestFeedbackDialogNegativeTitle(@StringRes resId: Int) =
+            setRequestFeedbackDialogNegativeTitle(context.getString(resId))
 
     fun setRequestFeedbackDialogOnPositive(value: () -> Unit): RateOrFeedback {
         requestFeedbackDialogOption.onPositive = value
@@ -187,10 +215,14 @@ class RateOrFeedback(activity: AppCompatActivity?, fragment: Fragment?) {
         return this
     }
 
+    fun setPlayStoreUrl(@StringRes resId: Int) = setPlayStoreUrl(context.getString(resId))
+
     fun setFeedbackEmail(value: String): RateOrFeedback {
         feedbackEmail = value
         return this
     }
+
+    fun setFeedbackEmail(@StringRes resId: Int) = setFeedbackEmail(context.getString(resId))
 
     fun setReviewRequestId(value: Int): RateOrFeedback {
         reviewRequestId = value
